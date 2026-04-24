@@ -1,12 +1,12 @@
 
 import java.util.Scanner;
 public class part_c {
-     static String decimalToBinary(int n)
+     static String decimalToBinary(int number)
     {String binary="";
-        while (n>0){
-            int remainder =n%2;
-            binary=remainder + binary ;
-            n=n/2;
+        while (number>0){
+            int remainder =number%2;
+            binary=remainder + binary;
+            number=number/2;
         }
         return binary;
 
@@ -15,8 +15,8 @@ public class part_c {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter an integer: ");
-        int n = input.nextInt();
-        String result= decimalToBinary(n);
+        int number = input.nextInt();
+        String result= decimalToBinary(number);
         System.out.println("Binary equivalent: " + result);
    input.close(); 
   }}
